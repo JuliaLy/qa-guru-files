@@ -28,7 +28,7 @@ public class ZipContentTests {
                     XLS xls = new XLS(zis);
                     Assertions.assertEquals(
                             "Test1",
-                            xls.excel.getSheetAt(0).getRow(1).getCell(0).getStringCellValue());
+                            xls.excel.getSheetAt(0).getRow(0).getCell(0).getStringCellValue());
                 } else if (entry.getName().contains(".csv")) {
                     CSVReader csvReader = new CSVReader(new InputStreamReader(zis));
                     List<String[]> content = csvReader.readAll();
